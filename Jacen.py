@@ -19,6 +19,20 @@ def gen_pipes(matrix):
     matrix[gap + 1][-1] = WHITE
     return matrix
 
+def move_pipes(matrix):
+    for row in matrix:
+        for i in range(7):
+            row[i] = row[i + 1]
+        row[-1] = BLUE
+    return matrix
+
+while True:
+    matrix = gen_pipes(matrix)
+    for i in range(9):
+        matrix = move_pipes(matrix)
+        sense.set_pixels(flatten(matrix))
+        sleep(1)
+
 matrix = gen_pipes(matrix)
 matrix = flatten(matrix)
 sense.set_pixels(matrix)
