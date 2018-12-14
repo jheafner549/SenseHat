@@ -31,7 +31,7 @@ def debug_message(message):
 
 def debug_pause(message):
     if debug_mode:
-    input(str(message) + "  Press enter to continue...")
+      input(str(message) + "  Press enter to continue...")
     
 
 sense.set_pixel(0,0, col_color)
@@ -204,5 +204,4 @@ while True:
     sense.show_message(str(score) + "pts!", text_colour=(255,255,255))
     
     # Start over
-    if bird_lives = 0:
-        return 
+    setup = True
